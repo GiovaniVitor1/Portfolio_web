@@ -1,43 +1,1947 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Mim - Portfólio Pessoal</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    id="meta-description"
+    name="description"
+    content="Portfólio de Giovani Vitor — Analista de Dados e Desenvolvedor, com projetos em Python, SQL, Tableau, Power BI e desenvolvimento de software."
+  />
+
+  <meta
+    name="author"
+    content="Giovani Vitor"
+  />
+
+  <meta
+    name="robots"
+    content="index, follow"
+  />
+
+  <meta
+    name="keywords"
+    content="Giovani Vitor, Analista de Dados, Python, SQL, Power BI, Tableau, Machine Learning, Desenvolvedor, Portfólio"
+  />
+
+
+  <!-- Metadados para compartilhamento -->
+
+  <meta
+    property="og:type"
+    content="website"
+  />
+
+  <meta
+    property="og:title"
+    content="Giovani Vitor | Analista de Dados & Desenvolvedor"
+  />
+
+  <meta
+    property="og:description"
+    content="Portfólio profissional com projetos de análise de dados, dashboards, SQL, machine learning e desenvolvimento."
+  />
+
+  <meta
+    name="twitter:card"
+    content="summary"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Giovani Vitor | Analista de Dados & Desenvolvedor"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Portfólio profissional com projetos em dados e desenvolvimento."
+  />
+
+
+  <meta
+    name="theme-color"
+    content="#090b10"
+  />
+
+
+  <title>
+    Giovani Vitor | Analista de Dados & Desenvolvedor
+  </title>
+
+
+  <!-- Favicon -->
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="assets/icons/favicon-32x32.png"
+  />
+
+
+  <!-- Fontes -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+
+  <!-- CSS -->
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+
+  <!-- Ícones -->
+
+  <script
+    defer
+    src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"
+  ></script>
+
 </head>
+
+
 <body>
-    <nav>
-        <ul>
-            <li><a href="index.html">Sobre Mim</a></li>
-            <li><a href="formacao.html">Formação</a></li>
-            <li><a href="portfolio.html">Portfólio</a></li>
-            <li><a href="contato.html">Contato</a></li>
-        </ul>
+
+
+  <!-- Luzes decorativas -->
+
+  <div class="page-glow page-glow--one"></div>
+
+  <div class="page-glow page-glow--two"></div>
+
+
+
+  <!-- =========================
+       MENU
+  ========================== -->
+
+  <header
+    class="header"
+    id="topo"
+  >
+
+    <nav
+      class="nav container"
+      aria-label="Navegação principal"
+    >
+
+
+      <a
+        class="brand"
+        href="#inicio"
+        aria-label="Ir para o início"
+      >
+        GV<span>.</span>
+      </a>
+
+
+      <!-- Menu mobile -->
+
+      <button
+        class="nav-toggle"
+        type="button"
+        aria-label="Abrir menu"
+        aria-expanded="false"
+      >
+
+        <span></span>
+
+        <span></span>
+
+        <span></span>
+
+      </button>
+
+
+      <div class="nav-menu">
+
+
+        <a
+          href="#inicio"
+          data-i18n="nav.home"
+        >
+          Início
+        </a>
+
+
+        <a
+          href="#sobre"
+          data-i18n="nav.about"
+        >
+          Sobre
+        </a>
+
+
+        <a
+          href="#habilidades"
+          data-i18n="nav.skills"
+        >
+          Habilidades
+        </a>
+
+
+        <a
+          href="#projetos"
+          data-i18n="nav.projects"
+        >
+          Projetos
+        </a>
+
+
+        <a
+          href="#formacao"
+          data-i18n="nav.education"
+        >
+          Formação
+        </a>
+
+
+        <a
+          href="#contato"
+          class="nav-cta"
+          data-i18n="nav.contact"
+        >
+          Contato
+        </a>
+
+
+        <!-- Seletor de idioma -->
+
+        <div class="language-control">
+
+          <iconify-icon
+            icon="lucide:languages"
+          ></iconify-icon>
+
+
+          <label
+            class="sr-only"
+            for="language-selector"
+          >
+            Idioma
+          </label>
+
+
+          <select
+            id="language-selector"
+            aria-label="Selecionar idioma"
+          >
+
+            <option value="pt">
+              Português
+            </option>
+
+            <option value="en">
+              English
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
     </nav>
 
-    <header>
-        <h1>Sobre Mim</h1>
-    </header>
-    <main>
-        <section>
-            <h2>Apresentação</h2>
-            <p>Olá, meu nome é Giovani Vitor e sou estudante de tecnologia, apaixonado por desenvolvimento web e por aprender novas tecnologias.
-                Tenho interesse em desenvolvimento de jogos em Python e em projetos que possam impactar positivamente as pessoas.</p>
-        </section>
-        <section>
-            <h2>Hobbies</h2>
-            <ul>
-                <li>Programação e estudos de back-end</li>
-                <li>Desenvolvimento de jogos em Python</li>
-                <li>jogos online</li>
-                <li>Estar em contato com a natureza</li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>© 2025 Giovani Vitor</p>
-    </footer>
+  </header>
+
+
+
+  <main>
+
+
+    <!-- =========================
+         INÍCIO
+    ========================== -->
+
+    <section
+      class="hero section"
+      id="inicio"
+    >
+
+      <div class="container hero-grid">
+
+
+        <div class="hero-content reveal">
+
+
+          <div class="eyebrow">
+
+            <span></span>
+
+            <span data-i18n="hero.available">
+              Disponível para novas oportunidades
+            </span>
+
+          </div>
+
+
+          <p
+            class="hero-kicker"
+            data-i18n="hero.hello"
+          >
+            Olá, eu sou
+          </p>
+
+
+          <h1>
+            Giovani <span>Vitor</span>
+          </h1>
+
+
+          <h2 data-i18n="hero.role">
+            Analista de Dados & Desenvolvedor
+          </h2>
+
+
+          <p
+            class="hero-description"
+            data-i18n="hero.description"
+          >
+            Transformo dados em informações úteis e ideias em soluções.
+            Desenvolvo projetos de análise de dados, visualização e
+            desenvolvimento de software.
+          </p>
+
+
+
+          <!-- Botões -->
+
+          <div class="hero-actions">
+
+
+            <a
+              class="btn btn-primary"
+              href="#projetos"
+            >
+
+              <span data-i18n="hero.projectsButton">
+                Ver projetos
+              </span>
+
+              <span>
+                ↗
+              </span>
+
+            </a>
+
+
+            <a
+              class="btn btn-secondary"
+              href="https://www.linkedin.com/in/giovani-vitor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/GiovaniVitor1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+
+          </div>
+
+
+
+          <!-- Tecnologias -->
+
+          <div
+            class="hero-techs"
+            aria-label="Tecnologias principais"
+          >
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:python"
+              ></iconify-icon>
+
+              Python
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="material-symbols:database-outline"
+              ></iconify-icon>
+
+              SQL
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:powerbi"
+              ></iconify-icon>
+
+              Power BI
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:tableau"
+              ></iconify-icon>
+
+              Tableau
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:html5"
+              ></iconify-icon>
+
+              HTML5
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:css"
+              ></iconify-icon>
+
+              CSS3
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:javascript"
+              ></iconify-icon>
+
+              JavaScript
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:springboot"
+              ></iconify-icon>
+
+              Spring Boot
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="simple-icons:github"
+              ></iconify-icon>
+
+              GitHub
+
+            </span>
+
+
+            <span class="tech-pill">
+
+              <iconify-icon
+                icon="material-symbols:psychology-outline"
+              ></iconify-icon>
+
+              Machine Learning
+
+            </span>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             FOTO
+        ========================== -->
+
+        <div
+          class="hero-visual reveal"
+          aria-label="Foto de Giovani Vitor"
+        >
+
+
+          <div class="portrait-shell">
+
+
+            <div
+              class="portrait-ring portrait-ring--one"
+            ></div>
+
+
+            <div
+              class="portrait-ring portrait-ring--two"
+            ></div>
+
+
+            <div class="portrait-card">
+
+
+              <img
+                class="profile-photo"
+                src="assets/img/perfil.png"
+                alt="Giovani Vitor"
+              />
+
+
+              <div class="portrait-status">
+
+                <span></span>
+
+                <span data-i18n="hero.status">
+                  Dados & Desenvolvimento
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </div>
+
+
+
+          <div
+            class="floating-card floating-card--one"
+          >
+
+            <strong>
+              Python
+            </strong>
+
+            <span data-i18n="hero.float1">
+              Análise & Automação
+            </span>
+
+          </div>
+
+
+
+          <div
+            class="floating-card floating-card--two"
+          >
+
+            <strong>
+              SQL
+            </strong>
+
+            <span data-i18n="hero.float2">
+              Dados & Insights
+            </span>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- Estatísticas -->
+
+      <div
+        class="container stats-grid reveal"
+      >
+
+
+        <article class="stat-card">
+
+          <strong
+            class="counter"
+            data-target="4"
+          >
+            0
+          </strong>
+
+          <span>
+            +
+          </span>
+
+          <p data-i18n="stats.projects">
+            Projetos em destaque
+          </p>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <strong
+            class="counter"
+            data-target="8"
+            id="repo-count"
+          >
+            0
+          </strong>
+
+          <span>
+            +
+          </span>
+
+          <p data-i18n="stats.repos">
+            Repositórios públicos
+          </p>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <strong
+            class="counter"
+            data-target="10"
+          >
+            0
+          </strong>
+
+          <span>
+            +
+          </span>
+
+          <p data-i18n="stats.techs">
+            Tecnologias e ferramentas
+          </p>
+
+        </article>
+
+
+        <article class="stat-card">
+
+          <strong>
+            100
+          </strong>
+
+          <span>
+            %
+          </span>
+
+          <p data-i18n="stats.focus">
+            Foco em evolução
+          </p>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SOBRE
+    ========================== -->
+
+    <section
+      class="section section-soft"
+      id="sobre"
+    >
+
+      <div class="container about-grid">
+
+
+        <div class="section-heading reveal">
+
+
+          <span class="section-number">
+            01
+          </span>
+
+
+          <p
+            class="section-label"
+            data-i18n="about.label"
+          >
+            Sobre mim
+          </p>
+
+
+          <h2 data-i18n="about.title">
+            Construindo uma carreira orientada por dados.
+          </h2>
+
+
+        </div>
+
+
+
+        <div class="about-copy reveal">
+
+
+          <p data-i18n="about.p1">
+            Sou estudante de Análise e Desenvolvimento de Sistemas
+            pela UNINTER, com formação complementar em Análise de Dados.
+            Tenho direcionado meus estudos e projetos para análise de
+            dados, visualização, bancos de dados, machine learning e
+            desenvolvimento back-end.
+          </p>
+
+
+          <p data-i18n="about.p2">
+            Minha trajetória prática inclui dashboards, testes A/B,
+            análises estatísticas, consultas SQL, modelos de machine
+            learning e APIs REST. Busco oportunidades onde eu possa
+            unir raciocínio analítico, tecnologia e aprendizado
+            contínuo para resolver problemas reais.
+          </p>
+
+
+          <div class="about-links">
+
+
+            <a
+              href="https://www.linkedin.com/in/giovani-vitor"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn ↗
+            </a>
+
+
+            <a
+              href="https://github.com/GiovaniVitor1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub ↗
+            </a>
+
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         HABILIDADES
+    ========================== -->
+
+    <section
+      class="section"
+      id="habilidades"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-heading section-heading--row reveal"
+        >
+
+
+          <div>
+
+
+            <span class="section-number">
+              02
+            </span>
+
+
+            <p
+              class="section-label"
+              data-i18n="skills.label"
+            >
+              Linguagens e tecnologias
+            </p>
+
+
+            <h2 data-i18n="skills.title">
+              Ferramentas que uso para construir soluções.
+            </h2>
+
+
+          </div>
+
+
+          <p
+            class="section-side-text"
+            data-i18n="skills.side"
+          >
+            Da exploração dos dados à entrega de dashboards,
+            modelos e aplicações.
+          </p>
+
+
+        </div>
+
+
+
+        <div class="skills-grid reveal">
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:python"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Python
+              </h3>
+
+              <p>
+                Pandas, NumPy, Matplotlib, Scikit-learn
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="material-symbols:database-outline"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                SQL
+              </h3>
+
+              <p>
+                PostgreSQL, MySQL, JOINs e análise
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:powerbi"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Power BI
+              </h3>
+
+              <p data-i18n="skills.powerbi">
+                Dashboards e indicadores
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:tableau"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Tableau
+              </h3>
+
+              <p data-i18n="skills.tableau">
+                Visualização e storytelling
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:html5"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                HTML5
+              </h3>
+
+              <p data-i18n="skills.html">
+                Estruturação de páginas web
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:css"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                CSS3
+              </h3>
+
+              <p data-i18n="skills.css">
+                Layouts responsivos e interfaces
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:javascript"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                JavaScript
+              </h3>
+
+              <p data-i18n="skills.js">
+                Interatividade e lógica no front-end
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:springboot"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Spring Boot
+              </h3>
+
+              <p data-i18n="skills.spring">
+                APIs REST e integração com banco
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="simple-icons:github"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Git & GitHub
+              </h3>
+
+              <p data-i18n="skills.git">
+                Versionamento e publicação de projetos
+              </p>
+
+            </div>
+
+          </article>
+
+
+
+          <article class="skill-card">
+
+            <div class="skill-icon">
+
+              <iconify-icon
+                icon="material-symbols:psychology-outline"
+              ></iconify-icon>
+
+            </div>
+
+            <div>
+
+              <h3>
+                Machine Learning
+              </h3>
+
+              <p data-i18n="skills.ml">
+                Regressão, classificação e clustering
+              </p>
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJETOS
+    ========================== -->
+
+    <section
+      class="section section-soft"
+      id="projetos"
+    >
+
+      <div class="container">
+
+
+        <div
+          class="section-heading section-heading--row reveal"
+        >
+
+
+          <div>
+
+
+            <span class="section-number">
+              03
+            </span>
+
+
+            <p
+              class="section-label"
+              data-i18n="projects.label"
+            >
+              Projetos
+            </p>
+
+
+            <h2 data-i18n="projects.title">
+              Projetos que colocam meus conhecimentos em prática.
+            </h2>
+
+
+          </div>
+
+
+          <a
+            class="text-link"
+            href="https://github.com/GiovaniVitor1?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="projects.all"
+          >
+            Todos os repositórios ↗
+          </a>
+
+
+        </div>
+
+
+
+        <div class="projects-grid">
+
+
+          <!-- CallMeMaybe -->
+
+          <article
+            class="project-card project-card--featured reveal"
+          >
+
+
+            <div class="project-topline">
+
+              <span>
+                01
+              </span>
+
+              <span data-i18n="project1.type">
+                Análise de Dados
+              </span>
+
+            </div>
+
+
+
+            <div
+              class="project-visual project-visual--dashboard project-visual--image"
+            >
+
+              <img
+                src="assets/img/callmemaybe-dashboard.png"
+                alt="Dashboard de eficiência dos operadores CallMeMaybe"
+                loading="lazy"
+              />
+
+            </div>
+
+
+
+            <div class="project-content">
+
+
+              <h3>
+
+                CallMeMaybe —
+
+                <span data-i18n="project1.title">
+                  Eficiência dos Operadores
+                </span>
+
+              </h3>
+
+
+              <p data-i18n="project1.description">
+                Análise de desempenho de operadores com preparação
+                de dados, métricas e dashboard interativo no Tableau.
+              </p>
+
+
+              <div class="tags">
+
+                <span>Python</span>
+
+                <span>Pandas</span>
+
+                <span>Tableau</span>
+
+                <span>EDA</span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a
+                  href="https://public.tableau.com/app/profile/giovani.vitor/viz/MonitoramentodaEficinciadosOperadores-CallMeMaybe/Dashboard-EficinciadosOperadores?publish=yes"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-i18n="project1.link"
+                >
+                  Ver dashboard ↗
+                </a>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Baozi Store -->
+
+          <article class="project-card reveal">
+
+
+            <div class="project-topline">
+
+              <span>
+                02
+              </span>
+
+              <span>
+                Back-end
+              </span>
+
+            </div>
+
+
+
+            <div
+              class="project-visual project-visual--api"
+            >
+
+              <div class="api-code">
+
+                <span>POST</span>
+                /api/pedidos
+
+                <br>
+
+                <span>GET</span>
+                /api/produtos
+
+                <br>
+
+                <span>PUT</span>
+                /api/clientes
+
+              </div>
+
+            </div>
+
+
+
+            <div class="project-content">
+
+
+              <h3>
+                Baozi Store — API REST
+              </h3>
+
+
+              <p data-i18n="project2.description">
+                API REST para gerenciamento de clientes, produtos e
+                pedidos, com persistência em MySQL e testes via Postman.
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  Spring Boot
+                </span>
+
+                <span>
+                  MySQL
+                </span>
+
+                <span>
+                  Postman
+                </span>
+
+                <span>
+                  REST
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a
+                  href="https://github.com/GiovaniVitor1/baozi-store"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+
+          <!-- Teste A/B -->
+
+          <article class="project-card reveal">
+
+
+            <div class="project-topline">
+
+              <span>
+                03
+              </span>
+
+              <span data-i18n="project3.type">
+                Estatística
+              </span>
+
+            </div>
+
+
+            <div
+              class="project-visual project-visual--ab"
+            >
+
+              <div class="ab-mark">
+
+                <b>
+                  A
+                </b>
+
+                <i>
+                  vs
+                </i>
+
+                <b>
+                  B
+                </b>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+
+              <h3 data-i18n="project3.title">
+                Funil & Teste A/A/B
+              </h3>
+
+
+              <p data-i18n="project3.description">
+                Análise de funil de conversão e testes estatísticos
+                para avaliar alterações no aplicativo e apoiar
+                decisões de produto.
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  Python
+                </span>
+
+                <span>
+                  Pandas
+                </span>
+
+                <span>
+                  SciPy
+                </span>
+
+                <span data-i18n="project3.tag">
+                  Estatística
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <span
+                  class="coming-soon"
+                  data-i18n="projects.organizing"
+                >
+                  Repositório em organização
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+
+          <!-- SQL -->
+
+          <article class="project-card reveal">
+
+
+            <div class="project-topline">
+
+              <span>
+                04
+              </span>
+
+              <span data-i18n="project4.type">
+                Banco de Dados
+              </span>
+
+            </div>
+
+
+            <div
+              class="project-visual project-visual--sql"
+            >
+
+              <div class="sql-stack">
+
+                <span>
+                  SELECT
+                </span>
+
+                <span>
+                  JOIN
+                </span>
+
+                <span>
+                  GROUP BY
+                </span>
+
+              </div>
+
+            </div>
+
+
+            <div class="project-content">
+
+
+              <h3 data-i18n="project4.title">
+                Análise de Base de Livros
+              </h3>
+
+
+              <p data-i18n="project4.description">
+                Consultas SQL para explorar livros, editoras,
+                autores, avaliações e indicadores de engajamento
+                em banco relacional.
+              </p>
+
+
+              <div class="tags">
+
+                <span>
+                  SQL
+                </span>
+
+                <span>
+                  PostgreSQL
+                </span>
+
+                <span data-i18n="project4.tag">
+                  Análise
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <span
+                  class="coming-soon"
+                  data-i18n="projects.organizing"
+                >
+                  Repositório em organização
+                </span>
+
+              </div>
+
+
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FORMAÇÃO
+    ========================== -->
+
+    <section
+      class="section"
+      id="formacao"
+    >
+
+      <div class="container resume-grid">
+
+
+        <div class="section-heading reveal">
+
+
+          <span class="section-number">
+            04
+          </span>
+
+
+          <p
+            class="section-label"
+            data-i18n="education.label"
+          >
+            Formação
+          </p>
+
+
+          <h2 data-i18n="education.title">
+            Aprendizado contínuo, com prática.
+          </h2>
+
+
+          <p
+            class="section-description"
+            data-i18n="education.description"
+          >
+            Minha formação combina desenvolvimento de software,
+            análise de dados e projetos aplicados.
+          </p>
+
+
+        </div>
+
+
+
+        <div class="timeline reveal">
+
+
+          <!-- UNINTER -->
+
+          <article class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+            <span
+              class="timeline-type"
+              data-i18n="education.degreeType"
+            >
+              Graduação
+            </span>
+
+
+            <h3 data-i18n="education.degree">
+              Análise e Desenvolvimento de Sistemas
+            </h3>
+
+
+            <p class="timeline-place">
+              UNINTER
+            </p>
+
+
+            <p data-i18n="education.degreeDesc">
+              Fundamentos de programação, desenvolvimento web,
+              banco de dados, engenharia de software e back-end.
+            </p>
+
+          </article>
+
+
+
+          <!-- TripleTen -->
+
+          <article class="timeline-item">
+
+            <div class="timeline-dot"></div>
+
+
+            <span
+              class="timeline-type"
+              data-i18n="education.extraType"
+            >
+              Formação complementar
+            </span>
+
+
+            <h3 data-i18n="education.data">
+              Análise de Dados
+            </h3>
+
+
+            <p
+              class="timeline-place"
+              data-i18n="education.tripleten"
+            >
+              Bootcamp TripleTen
+            </p>
+
+
+            <p data-i18n="education.dataDesc">
+              Python, SQL, estatística, visualização, Tableau,
+              Power BI, testes A/B, métricas de negócio e
+              machine learning.
+            </p>
+
+          </article>
+
+
+
+          <!-- Portfólio -->
+
+          <article class="timeline-item">
+
+
+            <div class="timeline-dot"></div>
+
+
+            <span
+              class="timeline-type"
+              data-i18n="education.practiceType"
+            >
+              Prática
+            </span>
+
+
+            <h3 data-i18n="education.practice">
+              Projetos de Portfólio
+            </h3>
+
+
+            <p class="timeline-place">
+              GitHub & Tableau Public
+            </p>
+
+
+            <p data-i18n="education.practiceDesc">
+              Desenvolvimento contínuo de projetos para demonstrar
+              habilidades técnicas e capacidade de resolver problemas.
+            </p>
+
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTATO
+    ========================== -->
+
+    <section
+      class="section contact-section"
+      id="contato"
+    >
+
+      <div class="container contact-card reveal">
+
+
+        <div>
+
+
+          <span class="section-number">
+            05
+          </span>
+
+
+          <p
+            class="section-label"
+            data-i18n="contact.label"
+          >
+            Contato
+          </p>
+
+
+          <h2 data-i18n="contact.title">
+            Vamos construir algo com dados e tecnologia?
+          </h2>
+
+
+          <p data-i18n="contact.description">
+            Estou aberto a oportunidades em Análise de Dados
+            e Desenvolvimento.
+          </p>
+
+
+
+          <div class="contact-details">
+
+
+            <a
+              href="mailto:gvngiovani12@gmail.com"
+            >
+
+              <iconify-icon
+                icon="lucide:mail"
+              ></iconify-icon>
+
+              <span>
+                gvngiovani12@gmail.com
+              </span>
+
+            </a>
+
+
+
+            <a
+              href="https://wa.me/5515991894508"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+
+              <iconify-icon
+                icon="simple-icons:whatsapp"
+              ></iconify-icon>
+
+              <span>
+                +55 15 99189-4508
+              </span>
+
+            </a>
+
+
+          </div>
+
+        </div>
+
+
+
+        <div class="contact-actions">
+
+
+          <a
+            class="btn btn-primary"
+            href="https://www.linkedin.com/in/giovani-vitor"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <iconify-icon
+              icon="simple-icons:linkedin"
+            ></iconify-icon>
+
+            <span data-i18n="contact.linkedin">
+              Falar pelo LinkedIn
+            </span>
+
+            ↗
+
+          </a>
+
+
+
+          <a
+            class="btn btn-secondary"
+            href="mailto:gvngiovani12@gmail.com"
+          >
+
+            <iconify-icon
+              icon="lucide:mail"
+            ></iconify-icon>
+
+            <span data-i18n="contact.emailButton">
+              Enviar e-mail
+            </span>
+
+          </a>
+
+
+
+          <a
+            class="btn btn-secondary"
+            href="https://wa.me/5515991894508"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <iconify-icon
+              icon="simple-icons:whatsapp"
+            ></iconify-icon>
+
+            <span data-i18n="contact.whatsappButton">
+              Falar pelo WhatsApp
+            </span>
+
+          </a>
+
+
+
+          <a
+            class="btn btn-secondary"
+            href="https://github.com/GiovaniVitor1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <iconify-icon
+              icon="simple-icons:github"
+            ></iconify-icon>
+
+            <span data-i18n="contact.github">
+              Ver GitHub
+            </span>
+
+          </a>
+
+
+
+          <!-- Currículo -->
+
+          <a
+            class="btn btn-download"
+            href="assets/docs/curriculo-giovani-vitor.pdf"
+            data-cv-pt="assets/docs/curriculo-giovani-vitor.pdf"
+            data-cv-en="assets/docs/resume-giovani-vitor-en.pdf"
+            download="Curriculo_Giovani_Vitor.pdf"
+          >
+
+            <iconify-icon
+              icon="lucide:download"
+            ></iconify-icon>
+
+            <span data-i18n="contact.cv">
+              Baixar currículo
+            </span>
+
+          </a>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- =========================
+       RODAPÉ
+  ========================== -->
+
+  <footer class="footer">
+
+
+    <div class="container footer-content">
+
+
+      <a
+        class="brand"
+        href="#inicio"
+      >
+        GV<span>.</span>
+      </a>
+
+
+      <p>
+
+        ©
+
+        <span id="year"></span>
+
+        Giovani Vitor.
+
+        <span data-i18n="footer.text">
+          Desenvolvido para meu portfólio profissional.
+        </span>
+
+      </p>
+
+
+      <a
+        href="#inicio"
+        class="back-top"
+        id="back-to-top"
+      >
+
+        <span data-i18n="footer.back">
+          Voltar ao topo
+        </span>
+
+        ↑
+
+      </a>
+
+
+    </div>
+
+
+  </footer>
+
+
+
+  <!-- JavaScript -->
+
+  <script src="script.js"></script>
+
+
 </body>
+
 </html>
