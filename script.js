@@ -1,13 +1,29 @@
-const header = document.querySelector('.header');
-const toggle = document.querySelector('.nav-toggle');
-const menu = document.querySelector('.nav-menu');
-const navLinks = document.querySelectorAll('.nav-menu a');
+// ================================
+// ELEMENTOS PRINCIPAIS
+// ================================
+
+const header =
+  document.querySelector('.header');
+
+const toggle =
+  document.querySelector('.nav-toggle');
+
+const menu =
+  document.querySelector('.nav-menu');
+
+const navLinks =
+  document.querySelectorAll('.nav-menu a');
 
 const languageSelector =
-  document.getElementById('language-selector');
+  document.getElementById(
+    'language-selector'
+  );
 
 const backToTop =
-  document.getElementById('back-to-top');
+  document.getElementById(
+    'back-to-top'
+  );
+
 
 
 // ================================
@@ -29,6 +45,7 @@ window.addEventListener(
 
   }
 );
+
 
 
 // ================================
@@ -94,6 +111,7 @@ navLinks.forEach(
 );
 
 
+
 // ================================
 // ANIMAÇÕES AO ROLAR
 // ================================
@@ -150,6 +168,7 @@ document
   );
 
 
+
 // ================================
 // CONTADORES
 // ================================
@@ -158,6 +177,7 @@ const counters =
   document.querySelectorAll(
     '.counter'
   );
+
 
 let countersStarted =
   false;
@@ -173,6 +193,7 @@ function animateCounters() {
 
   }
 
+
   countersStarted =
     true;
 
@@ -180,20 +201,25 @@ function animateCounters() {
   counters.forEach(
     counter => {
 
+
       const target =
         Number(
           counter.dataset.target ||
           0
         );
 
+
       const duration =
         850;
+
 
       const start =
         performance.now();
 
 
+
       function frame(now) {
+
 
         const progress =
           Math.min(
@@ -249,10 +275,12 @@ function animateCounters() {
         frame
       );
 
+
     }
   );
 
 }
+
 
 
 // ================================
@@ -267,10 +295,12 @@ const stats =
 
 if (stats) {
 
+
   const statsObserver =
     new IntersectionObserver(
 
       entries => {
+
 
         if (
           entries[0]
@@ -298,7 +328,9 @@ if (stats) {
     stats
   );
 
+
 }
+
 
 
 // ================================
@@ -320,6 +352,7 @@ if (year) {
 }
 
 
+
 // ================================
 // REPOSITÓRIOS DO GITHUB
 // ================================
@@ -339,6 +372,7 @@ fetch(
   .then(
     data => {
 
+
       const repoCount =
         document.getElementById(
           'repo-count'
@@ -350,6 +384,7 @@ fetch(
         typeof data.public_repos ===
         'number'
       ) {
+
 
         repoCount.dataset.target =
           data.public_repos;
@@ -364,7 +399,9 @@ fetch(
 
         }
 
+
       }
+
 
     }
   )
@@ -373,10 +410,11 @@ fetch(
     () => {
 
       // Mantém o valor padrão
-      // caso a API esteja indisponível.
+      // se a API do GitHub estiver indisponível.
 
     }
   );
+
 
 
 // ================================
@@ -385,11 +423,14 @@ fetch(
 
 if (backToTop) {
 
+
   backToTop.addEventListener(
     'click',
     event => {
 
+
       event.preventDefault();
+
 
       window.scrollTo({
 
@@ -399,10 +440,13 @@ if (backToTop) {
 
       });
 
+
     }
   );
 
+
 }
+
 
 
 // ================================
@@ -412,11 +456,13 @@ if (backToTop) {
 const translations = {
 
 
+
   // ============================
   // PORTUGUÊS
   // ============================
 
   pt: {
+
 
     'nav.home':
       'Início',
@@ -435,6 +481,7 @@ const translations = {
 
     'nav.contact':
       'Contato',
+
 
 
     'hero.available':
@@ -462,6 +509,7 @@ const translations = {
       'Dados & Insights',
 
 
+
     'stats.projects':
       'Projetos em destaque',
 
@@ -475,6 +523,7 @@ const translations = {
       'Foco em evolução',
 
 
+
     'about.label':
       'Sobre mim',
 
@@ -486,6 +535,7 @@ const translations = {
 
     'about.p2':
       'Minha trajetória prática inclui dashboards, testes A/B, análises estatísticas, consultas SQL, modelos de machine learning e APIs REST. Busco oportunidades onde eu possa unir raciocínio analítico, tecnologia e aprendizado contínuo para resolver problemas reais.',
+
 
 
     'skills.label':
@@ -522,6 +572,7 @@ const translations = {
       'Regressão, classificação e clustering',
 
 
+
     'projects.label':
       'Projetos',
 
@@ -531,26 +582,41 @@ const translations = {
     'projects.all':
       'Todos os repositórios ↗',
 
-    'projects.organizing':
-      'Repositório em organização',
 
+
+    // CALLMEMAYBE
 
     'project1.type':
       'Análise de Dados',
 
     'project1.title':
-      'Eficiência dos Operadores',
+      'CallMeMaybe — Eficiência dos Operadores',
 
     'project1.description':
-      'Análise de desempenho de operadores com preparação de dados, métricas e dashboard interativo no Tableau.',
+      'Análise de desempenho de operadores com preparação de dados, métricas, testes estatísticos e dashboard interativo no Tableau.',
 
     'project1.link':
       'Ver dashboard ↗',
 
 
-    'project2.description':
-      'API REST para gerenciamento de clientes, produtos e pedidos, com persistência em MySQL e testes via Postman.',
 
+    // INSTACART
+
+    'project2.type':
+      'Análise Exploratória',
+
+    'project2.title':
+      'Instacart — Comportamento de Compra e Recompra',
+
+    'project2.description':
+      'Análise exploratória do comportamento de compra, horários de maior atividade, produtos mais comprados e padrões de recompra dos clientes.',
+
+    'project2.link':
+      'Ver dashboard ↗',
+
+
+
+    // FUNIL A/A/B
 
     'project3.type':
       'Estatística',
@@ -561,24 +627,22 @@ const translations = {
     'project3.description':
       'Análise de funil de conversão e testes estatísticos para avaliar alterações no aplicativo e apoiar decisões de produto.',
 
-    'project3.tag':
-      'Estatística',
-
     'project3.link':
       'Ver dashboard ↗',
 
+
+
+    // SQL BOOKS
 
     'project4.type':
       'Banco de Dados',
 
     'project4.title':
-      'Análise de Base de Livros',
+      'Análise de Base de Livros com SQL',
 
     'project4.description':
-      'Consultas SQL para explorar livros, editoras, autores, avaliações e indicadores de engajamento em banco relacional.',
+      'Consultas SQL em PostgreSQL para explorar livros, autores, editoras, avaliações e indicadores de engajamento em uma base relacional.',
 
-    'project4.tag':
-      'Análise',
 
 
     'education.label':
@@ -621,6 +685,7 @@ const translations = {
       'Desenvolvimento contínuo de projetos para demonstrar habilidades técnicas e capacidade de resolver problemas.',
 
 
+
     'contact.label':
       'Contato',
 
@@ -646,13 +711,16 @@ const translations = {
       'Baixar currículo',
 
 
+
     'footer.text':
       'Desenvolvido para meu portfólio profissional.',
 
     'footer.back':
       'Voltar ao topo'
 
+
   },
+
 
 
   // ============================
@@ -660,6 +728,7 @@ const translations = {
   // ============================
 
   en: {
+
 
     'nav.home':
       'Home',
@@ -678,6 +747,7 @@ const translations = {
 
     'nav.contact':
       'Contact',
+
 
 
     'hero.available':
@@ -705,6 +775,7 @@ const translations = {
       'Data & Insights',
 
 
+
     'stats.projects':
       'Featured projects',
 
@@ -718,6 +789,7 @@ const translations = {
       'Focus on growth',
 
 
+
     'about.label':
       'About me',
 
@@ -729,6 +801,7 @@ const translations = {
 
     'about.p2':
       'My hands-on experience includes dashboards, A/B tests, statistical analyses, SQL queries, machine learning models and REST APIs. I am looking for opportunities where I can combine analytical thinking, technology and continuous learning to solve real problems.',
+
 
 
     'skills.label':
@@ -765,6 +838,7 @@ const translations = {
       'Regression, classification and clustering',
 
 
+
     'projects.label':
       'Projects',
 
@@ -774,26 +848,41 @@ const translations = {
     'projects.all':
       'All repositories ↗',
 
-    'projects.organizing':
-      'Repository being organized',
 
+
+    // CALLMEMAYBE
 
     'project1.type':
       'Data Analysis',
 
     'project1.title':
-      'Operator Efficiency',
+      'CallMeMaybe — Operator Efficiency',
 
     'project1.description':
-      'Operator performance analysis with data preparation, metrics and an interactive Tableau dashboard.',
+      'Operator performance analysis with data preparation, metrics, statistical testing and an interactive Tableau dashboard.',
 
     'project1.link':
       'View dashboard ↗',
 
 
-    'project2.description':
-      'REST API for managing customers, products and orders, with MySQL persistence and Postman testing.',
 
+    // INSTACART
+
+    'project2.type':
+      'Exploratory Analysis',
+
+    'project2.title':
+      'Instacart — Purchase and Reorder Behavior',
+
+    'project2.description':
+      'Exploratory analysis of purchasing behavior, peak activity times, most purchased products and customer reorder patterns.',
+
+    'project2.link':
+      'View dashboard ↗',
+
+
+
+    // FUNNEL A/A/B
 
     'project3.type':
       'Statistics',
@@ -804,24 +893,22 @@ const translations = {
     'project3.description':
       'Conversion funnel analysis and statistical tests to evaluate app changes and support product decisions.',
 
-    'project3.tag':
-      'Statistics',
-
     'project3.link':
       'View dashboard ↗',
 
+
+
+    // SQL BOOKS
 
     'project4.type':
       'Database',
 
     'project4.title':
-      'Book Database Analysis',
+      'Book Database Analysis with SQL',
 
     'project4.description':
-      'SQL queries to explore books, publishers, authors, ratings and engagement indicators in a relational database.',
+      'PostgreSQL queries to explore books, authors, publishers, ratings and engagement indicators in a relational database.',
 
-    'project4.tag':
-      'Analysis',
 
 
     'education.label':
@@ -864,6 +951,7 @@ const translations = {
       'Continuous project development to demonstrate technical skills and problem-solving ability.',
 
 
+
     'contact.label':
       'Contact',
 
@@ -889,15 +977,19 @@ const translations = {
       'Download résumé',
 
 
+
     'footer.text':
       'Built for my professional portfolio.',
 
     'footer.back':
       'Back to top'
 
+
   }
 
+
 };
+
 
 
 // ================================
@@ -906,9 +998,11 @@ const translations = {
 
 function applyLanguage(lang) {
 
+
   const dictionary =
     translations[lang] ||
     translations.pt;
+
 
 
   document
@@ -917,6 +1011,7 @@ function applyLanguage(lang) {
     )
     .forEach(
       element => {
+
 
         const key =
           element.dataset.i18n;
@@ -931,8 +1026,10 @@ function applyLanguage(lang) {
 
         }
 
+
       }
     );
+
 
 
   document.documentElement.lang =
@@ -941,12 +1038,14 @@ function applyLanguage(lang) {
       : 'pt-BR';
 
 
+
   document.title =
     lang === 'en'
 
       ? 'Giovani Vitor | Data Analyst & Developer'
 
       : 'Giovani Vitor | Analista de Dados & Desenvolvedor';
+
 
 
   const metaDescription =
@@ -958,6 +1057,7 @@ function applyLanguage(lang) {
   if (
     metaDescription
   ) {
+
 
     metaDescription.setAttribute(
 
@@ -971,7 +1071,9 @@ function applyLanguage(lang) {
 
     );
 
+
   }
+
 
 
   if (
@@ -984,7 +1086,10 @@ function applyLanguage(lang) {
   }
 
 
-  // Currículo conforme idioma
+
+  // ============================
+  // CURRÍCULO CONFORME IDIOMA
+  // ============================
 
   const cvButton =
     document.querySelector(
@@ -996,6 +1101,7 @@ function applyLanguage(lang) {
     cvButton
   ) {
 
+
     const cvPath =
       lang === 'en'
 
@@ -1004,10 +1110,12 @@ function applyLanguage(lang) {
         : cvButton.dataset.cvPt;
 
 
+
     cvButton.setAttribute(
       'href',
       cvPath
     );
+
 
 
     cvButton.setAttribute(
@@ -1022,7 +1130,9 @@ function applyLanguage(lang) {
 
     );
 
+
   }
+
 
 
   localStorage.setItem(
@@ -1030,7 +1140,9 @@ function applyLanguage(lang) {
     lang
   );
 
+
 }
+
 
 
 // ================================
@@ -1041,21 +1153,26 @@ if (
   languageSelector
 ) {
 
+
   languageSelector.addEventListener(
 
     'change',
 
     event => {
 
+
       applyLanguage(
         event.target.value
       );
+
 
     }
 
   );
 
+
 }
+
 
 
 // ================================
@@ -1081,6 +1198,7 @@ const browserLanguage =
     ? 'pt'
 
     : 'en';
+
 
 
 applyLanguage(
